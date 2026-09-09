@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instalación de Safe Exam Browser - Portal SEB</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* CSS Personalizado */
+    .hero-step {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      color: white;
+      padding: 2.5rem 0;
+    }
+    .timeline {
+      position: relative;
+      border-left: 3px solid #0d6efd;
+      margin-left: 1rem;
+      padding-left: 1.5rem;
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-badge {
+      position: absolute;
+      left: -2.35rem;
+      top: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: #0d6efd;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 0 0 4px #fff;
+    }
+    .badge-check {
+      background-color: #198754 !important;
+    }
+    .notice-card {
+      border-left: 5px solid #ffc107;
+      background-color: #fff8e6;
+    }
+    .info-card {
+      border-left: 5px solid #0dcaf0;
+      background-color: #f0fcfd;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-shield-halved me-2"></i>Portal SEB
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Manuales y Guías
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="instalacion-seb.html">Instalación de SEB</a></li>
+              <li><a class="dropdown-item" href="prueba-piloto.html">Prueba Piloto</a></li>
+              <li><a class="dropdown-item" href="guia-configuracion.html">Configuración (Formularios / Classroom)</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="politicas.html">Políticas y Reglamento</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="hero-step text-center mb-4">
+    <div class="container">
+      <h1 class="fw-bold"><i class="fa-solid fa-download me-2"></i>Manual de Instalación</h1>
+      <p class="lead mb-0">Guía paso a paso para instalar Safe Exam Browser en tu equipo</p>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- BOTÓN VOLVER -->
+        <a href="index.html" class="btn btn-outline-secondary btn-sm mb-4">
+          <i class="fa-solid fa-arrow-left me-1"></i> Volver al Menú Principal
+        </a>
+
+        <!-- AVISO IMPORTANTE -->
+        <div class="card notice-card p-3 mb-4 shadow-sm">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-laptop text-warning display-6 me-3"></i>
+            <div>
+              <h5 class="fw-bold text-dark mb-1">Antes de comenzar, por favor tome en cuenta:</h5>
+              <p class="mb-0 text-muted"><strong>Computadora:</strong> Debe realizar este proceso desde una computadora con sistema operativo <strong>Windows (7, 10 u 11)</strong>. No se recomienda hacerlo desde tablets o celulares.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ¿QUÉ ES SEB? -->
+        <div class="card info-card p-3 mb-5 shadow-sm">
+          <div class="d-flex align-items-start">
+            <i class="fa-solid fa-circle-info text-info display-6 me-3 mt-1"></i>
+            <div>
+              <h5 class="fw-bold text-dark mb-1">¿Qué es Safe Exam Browser (SEB)?</h5>
+              <p class="mb-0 text-secondary">
+                Es un navegador de internet especial y seguro que, al abrirse, muestra únicamente la pantalla del examen y evita temporalmente que se puedan abrir otras ventanas o buscar respuestas en internet. Al cerrar el examen, su computadora vuelve a la normalidad de inmediato.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO A PASO EN TIMELINE -->
+        <h3 class="fw-bold text-primary mb-4"><i class="fa-solid fa-list-check me-2"></i>Proceso de Instalación</h3>
+
+        <div class="timeline ms-2">
+
+          <!-- PASO 1 -->
+          <div class="timeline-step">
+            <div class="timeline-badge">1</div>
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="card-title fw-bold text-dark mb-3">Descargar el instalador del programa</h4>
+                <ol class="lh-lg mb-3">
+                  <li>Abra su navegador de internet habitual (como Google Chrome o Microsoft Edge).</li>
+                  <li>
+                    Copie y pegue el siguiente enlace en la barra de direcciones de arriba (o dé clic sobre él):
+                    <div class="input-group my-2" style="max-width: 500px;">
+                      <input type="text" id="downloadUrl" class="form-control form-control-sm" value="https://safeexambrowser.org/download_en.html" readonly>
+                      <button class="btn btn-primary btn-sm" onclick="copyUrl()">
+                        <i class="fa-solid fa-copy me-1"></i>Copiar
+                      </button>
+                      <a href="https://safeexambrowser.org/download_en.html" target="_blank" class="btn btn-outline-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Ir al sitio
+                      </a>
+                    </div>
+                  </li>
+                  <li>En la pantalla que se abre, busque un botón grande que dice: <strong>"SEB 3.10.1 for Windows"</strong> y dele un clic.</li>
+                  <li>Espere unos 5 segundos. Verá que se empieza a descargar un archivo en la esquina inferior o superior de su pantalla.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASO 2 -->
+          <div class="timeline-step">
+            <div class="timeline-badge">2</div>
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="card-title fw-bold text-dark mb-3">Instalar el programa en su computadora</h4>
+                <ol class="lh-lg mb-3">
+                  <li>Una vez que termine la descarga, dé un clic sobre el archivo descargado (suele llamarse <code>SEB_3.10.1_Setup.exe</code> o similar).</li>
+                  <li>
+                    Si la pantalla de su computadora se oscurece y le pregunta: <em>¿Quiere permitir que esta aplicación realice cambios en el dispositivo?</em>, dé clic en el botón <strong>SÍ</strong>. 
+                    <span class="badge bg-secondary ms-1">Seguridad de Windows</span>
+                  </li>
+                  <li>Se abrirá la ventana de instalación: Marque la casilla pequeña que dice <strong>"I agree to the license terms and conditions"</strong> (Acepto los términos y condiciones).</li>
+                  <li>Dé clic en el botón <strong>Install</strong> (Instalar).</li>
+                  <li>El programa comenzará a cargarse (verá una barra verde o azul). Esto tarda menos de un minuto.</li>
+                  <li>Al finalizar, presione el botón <strong>Close</strong> (Cerrar).</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASO FINAL -->
+          <div class="timeline-step">
+            <div class="timeline-badge badge-check"><i class="fa-solid fa-check"></i></div>
+            <div class="card bg-success text-white shadow-sm border-0">
+              <div class="card-body text-center py-4">
+                <h4 class="fw-bold mb-1"><i class="fa-solid fa-circle-check me-2"></i>¡Listo!</h4>
+                <p class="mb-0 fs-5">El programa ya está instalado correctamente en su computadora.</p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /timeline -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 Plataforma Educativa - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript Personalizado -->
+  <script>
+    function copyUrl() {
+      const copyText = document.getElementById("downloadUrl");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* Para móviles */
+      navigator.clipboard.writeText(copyText.value);
+
+      // Feedback visual
+      alert("¡Enlace copiado al portapapeles!");
+    }
+  </script>
+</body>
+</html>
