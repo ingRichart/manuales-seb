@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Cómo contestar un examen en SEB? - Portal SEB</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* CSS Personalizado */
+    .hero-step {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      color: white;
+      padding: 2.5rem 0;
+    }
+    .timeline {
+      position: relative;
+      border-left: 3px solid #0d6efd;
+      margin-left: 1rem;
+      padding-left: 1.5rem;
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-badge {
+      position: absolute;
+      left: -2.35rem;
+      top: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: #0d6efd;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 0 0 4px #fff;
+    }
+    .badge-check {
+      background-color: #198754 !important;
+    }
+    .badge-danger {
+      background-color: #dc3545 !important;
+    }
+    .callout-warning {
+      border-left: 4px solid #ffc107;
+      background-color: #fff8e6;
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .callout-info {
+      border-left: 4px solid #0dcaf0;
+      background-color: #f0fcfd;
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Estilos para contenedores de imagen */
+    .img-placeholder-container {
+      background-color: #f8f9fa;
+      border: 2px dashed #0d6efd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin: 15px 0;
+    }
+    .img-placeholder-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    /* Estilos para impresión a PDF */
+    @media print {
+      .navbar, .btn-download-pdf, .btn-back-menu, footer {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      .hero-step {
+        background: none !important;
+        color: #000000 !important;
+        padding: 1rem 0 !important;
+        border-bottom: 2px solid #0d6efd;
+      }
+      .card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+      .timeline-badge {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-shield-halved me-2"></i>Portal SEB
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Manuales y Guías
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="instalacion-seb.html">Instalación de SEB</a></li>
+              <li><a class="dropdown-item" href="prueba-piloto.html">Prueba Piloto</a></li>
+              <li><a class="dropdown-item" href="guia-configuracion.html">Configuración (Formularios / Classroom)</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="politicas.html">Políticas y Reglamento</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="hero-step text-center mb-4">
+    <div class="container">
+      <h1 class="fw-bold"><i class="fa-solid fa-pen-to-square me-2"></i>Guía para Contestar Examen en SEB</h1>
+      <p class="lead mb-0">Instrucciones para resolver la evaluación mediante Google Classroom y subir evidencias</p>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- BOTONES DE ACCIÓN (VOLVER Y DESCARGAR PDF) -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <a href="index.html" class="btn btn-outline-secondary btn-sm btn-back-menu">
+            <i class="fa-solid fa-arrow-left me-1"></i> Volver al Menú Principal
+          </a>
+          <button onclick="downloadPDF()" class="btn btn-danger btn-sm shadow-sm btn-download-pdf">
+            <i class="fa-solid fa-file-pdf me-1"></i> Descargar Guía en PDF
+          </button>
+        </div>
+
+        <!-- TIMELINE PASO A PASO -->
+        <div class="timeline ms-2">
+
+          <!-- PASO 1 -->
+          <div class="timeline-step">
+            <div class="timeline-badge">1</div>
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="card-title fw-bold text-dark mb-3">Abrir el Examen desde Classroom</h4>
+                
+                <ol class="lh-lg mb-3">
+                  <li>
+                    <strong>Acceda a la publicación de Classroom:</strong> Ubique la tarea o evaluación en el área de <em>Trabajo de clase</em> de su grupo.
+                  </li>
+                  <li>
+                    <strong>Descargue el archivo de acceso:</strong> Haga clic en el archivo adjunto con extensión <code>.seb</code> asignado a la prueba y guárdelo en su computadora.
+                  </li>
+                  <li>
+                    <strong>Inicie el entorno seguro:</strong> Haga doble clic en el archivo descargado para abrir Safe Exam Browser e inicie sesión con su cuenta de correo institucional.
+                  </li>
+                </ol>
+
+                <div class="callout-info mb-3">
+                  <h6 class="fw-bold text-dark mb-1"><i class="fa-solid fa-circle-info text-info me-2"></i>¿Cómo responder las preguntas normales?</h6>
+                  <p class="mb-0 text-secondary small">
+                    Las preguntas de opción múltiple, casilla de verificación o respuesta corta se responden **exactamente igual que en cualquier formulario convencional de Google Forms**.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASO 2: DINÁMICA DE SUBIDA DE ARCHIVOS -->
+          <div class="timeline-step">
+            <div class="timeline-badge">2</div>
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="card-title fw-bold text-dark mb-3"><i class="fa-solid fa-cloud-arrow-up text-primary me-2"></i>Subir ejercicios realizados en hoja de papel</h4>
+                <p class="text-secondary">
+                  Si dentro del examen se le solicita resolver un ejercicio a mano en una hoja de papel para adjuntarlo como evidencia, la dinámica cambia. Siga estos pasos detenidamente:
+                </p>
+
+                <!-- SUB-PASO 1 -->
+                <div class="bg-white p-3 rounded border mb-4">
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">1</span>Paso 1: Captura</h6>
+                  <p class="mb-2 text-muted">Tome una foto desde su celular al procedimiento de su hoja de papel.</p>
+                  
+                  <!-- Espacio para Imagen 1 -->
+                  <div class="img-placeholder-container">
+                    <img src="img/contestarExamen01.jpeg" alt="Paso 1">
+                  </div>
+                </div>
+
+                <!-- SUB-PASO 2 -->
+                <div class="bg-white p-3 rounded border mb-4">
+                    <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">2</span>
+                        Paso 2: Subir a Google Drive
+                    </h6>
+                    <p class="mb-2 text-muted">Dele a la opción <strong>Compartir</strong> en la foto tomada 
+                        y súbala al  <strong>Google Drive</strong> de su cuenta de la Universidad haciendo clic en <strong>Subir</strong>.
+                    </p>
+                  
+                  <!-- Espacio para Imagen 2 -->
+                  <div class="img-placeholder-container">
+                    <img src="img/contestarExamen02.jpeg" alt="Paso 2">
+                  </div>
+                </div>
+
+                <!-- SUB-PASO 3 -->
+                <div class="bg-white p-3 rounded border mb-4">
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">3</span>Paso 3: Adjuntar en el Examen (SEB)</h6>
+                  <p class="mb-2 text-muted">En el examen dentro de SEB, dele clic a <strong>Agregar archivo</strong> 
+                    y búsquelo en la pestaña de <strong>Recientes</strong> de su Google Drive.</p>
+                  
+                  <!-- Espacio para Imagen 3 -->
+                  <div class="img-placeholder-container">
+                    <img src="img/contestarExamen03.jpg" alt="Paso 3">
+                  </div>
+                </div>
+
+                <!-- SUB-PASO 4 -->
+                <div class="bg-white p-3 rounded border mb-4">
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">4</span>Paso 4: Confirmar la Subida</h6>
+                  <p class="mb-2 text-muted">Seleccione el archivo cargado y confirme para que quede adjuntado a la pregunta del examen.</p>
+                  
+                  <!-- Espacio para Imagen 4 -->
+                  <div class="img-placeholder-container">
+                    <img src="img/contestarExamen04.jpg" alt="Paso 4">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- PASO 3: FINALIZACIÓN -->
+          <div class="timeline-step">
+            <div class="timeline-badge badge-danger">3</div>
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="card-title fw-bold text-dark mb-3">Enviar Examen y Salir de SEB</h4>
+                <ol class="lh-lg">
+                  <li>Al finalizar todas las preguntas, haga clic en el botón <strong>Enviar</strong> dentro del formulario.</li>
+                  <li>Una vez enviada la respuesta, diríjase al <strong>botón rojo de encendido/apagado</strong> ubicado en la esquina inferior derecha para cerrar el navegador seguro.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONFIRMACIÓN FINAL -->
+          <div class="timeline-step">
+            <div class="timeline-badge badge-check"><i class="fa-solid fa-check"></i></div>
+            <div class="card bg-success text-white shadow-sm border-0">
+              <div class="card-body text-center py-4">
+                <h4 class="fw-bold mb-1"><i class="fa-solid fa-circle-check me-2"></i>Examen Entregado</h4>
+                <p class="mb-0 fs-5">¡Tu evaluación ha sido registrada exitosamente!</p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /timeline -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 Universidad del Norte, A.C. - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Función para exportar a PDF
+    function downloadPDF() {
+      window.print();
+    }
+  </script>
+</body>
+</html>

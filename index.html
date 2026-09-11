@@ -36,8 +36,8 @@
   <!-- BARRA DE NAVEGACIÓN (MENÚ PRINCIPAL) -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">
-        <i class="fa-solid me-2"></i>Portal SEB
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-shield-halved me-2"></i>Portal SEB
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -55,6 +55,7 @@
               <li><a class="dropdown-item" href="instalacion-seb.html">Instalación de SEB</a></li>
               <li><a class="dropdown-item" href="prueba-piloto.html">Prueba Piloto</a></li>
               <li><a class="dropdown-item" href="guia-configuracion.html">Configuración (Formularios / Classroom)</a></li>
+              <li><a class="dropdown-item" href="contestar-examen-classroom.html">Contestar Examen en Classroom</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="politicas.html">Políticas y Reglamento</a></li>
             </ul>
@@ -78,10 +79,10 @@
 
   <!-- CONTENIDO PRINCIPAL / TARJETAS DE OPCIONES -->
   <main class="container mb-5">
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
 
       <!-- OPCIÓN 1: Manual de Instalación -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-4">
         <div class="card card-option h-100 shadow-sm p-3 text-center">
           <div class="card-body d-flex flex-column">
             <div class="icon-box">
@@ -97,7 +98,7 @@
       </div>
 
       <!-- OPCIÓN 2: Prueba Piloto -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-4">
         <div class="card card-option h-100 shadow-sm p-3 text-center">
           <div class="card-body d-flex flex-column">
             <div class="icon-box">
@@ -113,7 +114,7 @@
       </div>
 
       <!-- OPCIÓN 3: Guía de Configuración -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-4">
         <div class="card card-option h-100 shadow-sm p-3 text-center">
           <div class="card-body d-flex flex-column">
             <div class="icon-box">
@@ -121,21 +122,37 @@
             </div>
             <h5 class="card-title fw-bold">3. Configuración</h5>
             <p class="card-text text-muted small flex-grow-1">
-              Guía para integrar Formularios de Google, SEB y Google Classroom.
+              Guía docente para integrar Formularios de Google, SEB y Google Classroom.
             </p>
             <a href="guia-configuracion.html" class="btn btn-primary mt-3 w-100">Ver Guía</a>
           </div>
         </div>
       </div>
 
-      <!-- OPCIÓN 4: Políticas y Reglamento -->
-      <div class="col-md-6 col-lg-3">
+      <!-- OPCIÓN 4: Contestar Examen en Classroom (NUEVA SECCIÓN) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-option h-100 shadow-sm p-3 text-center">
+          <div class="card-body d-flex flex-column">
+            <div class="icon-box">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <h5 class="card-title fw-bold">4. Contestar Examen en Classroom</h5>
+            <p class="card-text text-muted small flex-grow-1">
+              Guía del estudiante para resolver evaluaciones en SEB y subir archivos desde Drive.
+            </p>
+            <a href="contestar-examen-classroom.html" class="btn btn-primary mt-3 w-100">Ver Instrucciones</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPCIÓN 5: Políticas y Reglamento -->
+      <div class="col-md-6 col-lg-4">
         <div class="card card-option h-100 shadow-sm p-3 text-center">
           <div class="card-body d-flex flex-column">
             <div class="icon-box">
               <i class="fa-solid fa-scale-balanced"></i>
             </div>
-            <h5 class="card-title fw-bold">4. Políticas y Reglamento</h5>
+            <h5 class="card-title fw-bold">5. Políticas y Reglamento</h5>
             <p class="card-text text-muted small flex-grow-1">
               Normativas, conductas permitidas y términos de los exámenes en línea.
             </p>
@@ -145,25 +162,6 @@
       </div>
 
     </div>
-
-    <!-- SECCIÓN EXTRA: PLANTILLA PARA FUTUROS MANUALES -->
-    <!--
-    <div class="row g-4 mt-2">
-      <div class="col-md-6 col-lg-3">
-        <div class="card card-option h-100 shadow-sm p-3 text-center">
-          <div class="card-body d-flex flex-column">
-            <div class="icon-box">
-              <i class="fa-solid fa-file-lines"></i>
-            </div>
-            <h5 class="card-title fw-bold">Nuevo Manual</h5>
-            <p class="card-text text-muted small flex-grow-1">Descripción del nuevo contenido.</p>
-            <a href="nuevo-manual.html" class="btn btn-outline-primary mt-3 w-100">Ver Contenido</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
-
   </main>
 
   <!-- PIE DE PÁGINA (FOOTER) -->
