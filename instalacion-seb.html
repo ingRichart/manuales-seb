@@ -51,6 +51,55 @@
       border-left: 5px solid #0dcaf0;
       background-color: #f0fcfd;
     }
+
+    /* ==========================================
+       ESTILOS EXCLUSIVOS PARA IMPRESIÓN A PDF
+       ========================================== */
+    @media print {
+      /* Ocultar elementos web innecesarios en el PDF */
+      .navbar, 
+      .btn-download-pdf, 
+      .btn-back-menu, 
+      .input-group button, 
+      .input-group a,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+      }
+
+      .hero-step {
+        background: none !important;
+        color: #000000 !important;
+        padding: 1rem 0 !important;
+        border-bottom: 2px solid #0d6efd;
+      }
+
+      .card {
+        border: 1px solid #de5d5d !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+
+      .timeline {
+        border-left: 2px solid #0d6efd !important;
+      }
+
+      .timeline-badge {
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .notice-card, .info-card {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
   </style>
 </head>
 <body class="bg-light">
@@ -99,10 +148,16 @@
     <div class="row justify-content-center">
       <div class="col-lg-9">
 
-        <!-- BOTÓN VOLVER -->
-        <a href="index.html" class="btn btn-outline-secondary btn-sm mb-4">
-          <i class="fa-solid fa-arrow-left me-1"></i> Volver al Menú Principal
-        </a>
+        <!-- BOTONES DE ACCIÓN (VOLVER Y DESCARGAR PDF) -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <a href="index.html" class="btn btn-outline-secondary btn-sm btn-back-menu">
+            <i class="fa-solid fa-arrow-left me-1"></i> Volver al Menú Principal
+          </a>
+          <!-- BOTÓN GENERAR PDF -->
+          <button onclick="downloadPDF()" class="btn btn-danger btn-sm shadow-sm btn-download-pdf">
+            <i class="fa-solid fa-file-pdf me-1"></i> Descargar Guía en PDF
+          </button>
+        </div>
 
         <!-- AVISO IMPORTANTE -->
         <div class="card notice-card p-3 mb-4 shadow-sm">
@@ -218,6 +273,11 @@
 
       // Feedback visual
       alert("¡Enlace copiado al portapapeles!");
+    }
+
+    // Función para disparar la descarga en PDF
+    function downloadPDF() {
+      window.print();
     }
   </script>
 </body>
