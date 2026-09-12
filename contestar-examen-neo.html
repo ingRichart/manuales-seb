@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿Cómo contestar un examen en SEB? - Portal SEB</title>
+  <title>¿Cómo contestar un examen en NEO LMS con SEB? - Portal SEB</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome para Iconos -->
@@ -124,7 +124,9 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="instalacion-seb.html">Instalación de SEB</a></li>
               <li><a class="dropdown-item" href="prueba-piloto.html">Prueba Piloto</a></li>
-              <li><a class="dropdown-item" href="guia-configuracion.html">Configuración (Formularios / Classroom)</a></li>
+              <li><a class="dropdown-item" href="menu-configuracion.html">Configuración (Docentes)</a></li>
+              <li><a class="dropdown-item" href="contestar-examen-classroom.html">Contestar Examen en Classroom</a></li>
+              <li><a class="dropdown-item active" href="contestar-examen-neo.html">Contestar Examen en NEO LMS</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="politicas.html">Políticas y Reglamento</a></li>
             </ul>
@@ -137,8 +139,8 @@
   <!-- ENCABEZADO -->
   <header class="hero-step text-center mb-4">
     <div class="container">
-      <h1 class="fw-bold"><i class="fa-solid fa-pen-to-square me-2"></i>Guía para Contestar Examen en SEB</h1>
-      <p class="lead mb-0">Instrucciones para resolver la evaluación mediante Google Classroom y subir evidencias</p>
+      <h1 class="fw-bold"><i class="fa-solid fa-graduation-cap me-2"></i>Guía para Contestar Examen en NEO LMS con SEB</h1>
+      <p class="lead mb-0">Instrucciones para resolver la evaluación dentro de NEO LMS y subir evidencias de trabajo a Google Drive</p>
     </div>
   </header>
 
@@ -165,86 +167,96 @@
             <div class="timeline-badge">1</div>
             <div class="card shadow-sm border-0">
               <div class="card-body">
-                <h4 class="card-title fw-bold text-dark mb-3">Abrir el Examen desde Classroom</h4>
+                <h4 class="card-title fw-bold text-dark mb-3">Abrir el Examen desde NEO LMS</h4>
                 
                 <ol class="lh-lg mb-3">
                   <li>
-                    <strong>Acceda a la publicación de Classroom:</strong> Ubique la tarea o evaluación en el área de <em>Trabajo de clase</em> de su grupo.
+                    <strong>Ingresa a tu lección o evaluación:</strong> Accede a NEO LMS, dirígete a tu clase y selecciona el examen correspondiente.
+                    <div class="img-placeholder-container">
+                      <img src="img/contestarExamenNeo01.png" alt="Ingresar a la lección en NEO LMS">
+                    </div>
                   </li>
                   <li>
-                    <strong>Descargue el archivo de acceso:</strong> Haga clic en el archivo adjunto con extensión <code>.seb</code> asignado a la prueba y guárdelo en su computadora.
+                    <strong>Revisa las instrucciones del examen:</strong> Revisa las instrucciones. Visualice que se le esta proporcionando una contraseña de acceso para abrir el examen con SEB.
+                    <div class="img-placeholder-container">
+                      <img src="img/contestarExamenNeo03.png" alt="Ingresar a la lección en NEO LMS">
+                    </div>
                   </li>
                   <li>
-                    <strong>Inicie el entorno seguro:</strong> Haga doble clic en el archivo descargado para abrir Safe Exam Browser e inicie sesión con su cuenta de correo institucional.
+                    <strong>Descargar el examen:</strong> Haz clic en el botón 
+                        <strong>Realice el cuestionario con Safe Exam Browser</strong>. 
+                        Se descargará un archivo con extensión <code>.seb</code> asignado a la prueba y se guardará en su computadora.
+                    <div class="img-placeholder-container">
+                      <img src="img/contestarExamenNeo02.png" alt="Pantalla de inicio con SEB en NEO LMS">
+                    </div>
                   </li>
+                    <li>
+                        <strong>Ejecutar el examen:</strong> Dar doble clic en el archivo descargado para abrir Safe Exam Browser.
+                        Si la plataforma te solicita una contraseña de acceso (<b>Student Password</b>), 
+                        ingrésala de acuerdo con las instrucciones proporcionadas por la plataforma en las instrucciones del examen.
+                        <div class="img-placeholder-container">
+                        <img src="img/contestarExamenNeo04.png" alt="Pantalla de inicio con SEB en NEO LMS">
+                        </div>
+                    </li>
                 </ol>
 
                 <div class="callout-info mb-3">
                   <h6 class="fw-bold text-dark mb-1"><i class="fa-solid fa-circle-info text-info me-2"></i>¿Cómo responder las preguntas normales?</h6>
                   <p class="mb-0 text-secondary small">
-                    Las preguntas de opción múltiple, casilla de verificación o respuesta corta se responden <b>exactamente igual que en cualquier formulario convencional de Google Forms</b>.
+                    Las preguntas de opción múltiple, falso/verdadero o texto libre dentro de NEO LMS se responden directamente dentro del navegador seguro SEB haciendo clic en la respuesta adecuada.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- PASO 2: DINÁMICA DE SUBIDA DE ARCHIVOS -->
+          <!-- PASO 2: DINÁMICA DE SUBIDA DE ARCHIVOS A GOOGLE DRIVE -->
           <div class="timeline-step">
             <div class="timeline-badge">2</div>
             <div class="card shadow-sm border-0">
               <div class="card-body">
-                <h4 class="card-title fw-bold text-dark mb-3"><i class="fa-solid fa-cloud-arrow-up text-primary me-2"></i>Subir ejercicios realizados en hoja de papel</h4>
+                <h4 class="card-title fw-bold text-dark mb-3"><i class="fa-solid fa-cloud-arrow-up text-primary me-2"></i>Subir evidencias de ejercicios realizados en papel</h4>
                 <p class="text-secondary">
-                  Si dentro del examen se le solicita resolver un ejercicio a mano en una hoja de papel para adjuntarlo como evidencia, la dinámica cambia. Siga estos pasos detenidamente:
+                  Si dentro de la pregunta en NEO LMS se te solicita resolver ejercicios a mano en una hoja de papel, debes subir la evidencia a tu carpeta personal de Google Drive. Sigue cuidadosamente estos pasos:
                 </p>
 
                 <!-- SUB-PASO 1 -->
                 <div class="bg-white p-3 rounded border mb-4">
-                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">1</span>Paso 1: Captura</h6>
-                  <p class="mb-2 text-muted">Tome una foto desde su celular al procedimiento de su hoja de papel.</p>
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">1</span>Paso 1: Captura de pantalla o fotografía</h6>
+                  <p class="mb-2 text-muted">Resuelve los ejercicios en tu hoja de papel. Al finalizar, toma fotografías claras y legibles del procedimiento utilizando tu teléfono celular.</p>
                   
-                  <!-- Espacio para Imagen 1 -->
                   <div class="img-placeholder-container">
-                    <img src="img/contestarExamen01.jpeg" alt="Paso 1">
+                    <img src="img/contestarExamen01.jpeg" alt="Paso 1: Tomar foto al ejercicio">
                   </div>
                 </div>
 
                 <!-- SUB-PASO 2 -->
                 <div class="bg-white p-3 rounded border mb-4">
-                    <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">2</span>
-                        Paso 2: Subir a Google Drive
-                    </h6>
-                    <p class="mb-2 text-muted">Dele a la opción <strong>Compartir</strong> en la foto tomada 
-                        y súbala al  <strong>Google Drive</strong> de su cuenta de la Universidad haciendo clic en <strong>Subir</strong>.
-                    </p>
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">2</span>Paso 2: Subir imágenes a Google Drive</h6>
+                  <p class="mb-2 text-muted">Presiona la opción <strong>Compartir</strong> en las fotografías de tu celular y súbelas directamente a la carpeta de Google Drive que tu maestro compartió contigo para esta clase.</p>
                   
-                  <!-- Espacio para Imagen 2 -->
                   <div class="img-placeholder-container">
-                    <img src="img/contestarExamen02.jpeg" alt="Paso 2">
+                    <img src="img/contestarExamen02.jpeg" alt="Paso 2: Subir foto a Google Drive">
                   </div>
                 </div>
 
                 <!-- SUB-PASO 3 -->
                 <div class="bg-white p-3 rounded border mb-4">
-                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">3</span>Paso 3: Adjuntar en el Examen (SEB)</h6>
-                  <p class="mb-2 text-muted">En el examen dentro de SEB, dele clic a <strong>Agregar archivo</strong> 
-                    y búsquelo en la pestaña de <strong>Recientes</strong> de su Google Drive.</p>
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">3</span>Paso 3: Abrir la carpeta desde el enlace de NEO LMS</h6>
+                  <p class="mb-2 text-muted">Dentro de la pregunta en NEO LMS, busca el texto con tu nombre y haz clic sobre el **enlace**. Este se abrirá en una nueva pestaña dentro de SEB para mostrarte tu carpeta compartida.</p>
                   
-                  <!-- Espacio para Imagen 3 -->
                   <div class="img-placeholder-container">
-                    <img src="img/contestarExamen03.jpg" alt="Paso 3">
+                    <img src="img/neo_estudiante03.png" alt="Paso 3: Abrir enlace a Drive en la pregunta">
                   </div>
                 </div>
 
                 <!-- SUB-PASO 4 -->
                 <div class="bg-white p-3 rounded border mb-4">
-                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">4</span>Paso 4: Confirmar la Subida</h6>
-                  <p class="mb-2 text-muted">Seleccione el archivo cargado y confirme para que quede adjuntado a la pregunta del examen.</p>
+                  <h6 class="fw-bold text-dark"><span class="badge bg-primary me-2">4</span>Paso 4: Confirmar la carga del archivo</h6>
+                  <p class="mb-2 text-muted">Verifica en la pestaña de Google Drive que tus fotografías aparezcan correctamente guardadas dentro de la carpeta antes de regresar a la pestaña del examen.</p>
                   
-                  <!-- Espacio para Imagen 4 -->
                   <div class="img-placeholder-container">
-                    <img src="img/contestarExamen04.jpg" alt="Paso 4">
+                    <img src="img/neo_estudiante04.png" alt="Paso 4: Confirmar archivo en Google Drive">
                   </div>
                 </div>
 
@@ -259,8 +271,8 @@
               <div class="card-body">
                 <h4 class="card-title fw-bold text-dark mb-3">Enviar Examen y Salir de SEB</h4>
                 <ol class="lh-lg">
-                  <li>Al finalizar todas las preguntas, haga clic en el botón <strong>Enviar</strong> dentro del formulario.</li>
-                  <li>Una vez enviada la respuesta, diríjase al <strong>botón rojo de encendido/apagado</strong> ubicado en la esquina inferior derecha para cerrar el navegador seguro.</li>
+                  <li>Al contestar la totalidad de las preguntas, haz clic en el botón <strong>Enviar evaluación</strong> o <strong>Finalizar</strong> dentro de NEO LMS.</li>
+                  <li>Para cerrar el navegador seguro, haz clic en el **botón rojo de encendido/apagado** (ubicado en la barra inferior o esquina derecha) e introduce la contraseña de salida (*Quit Password*) si tu profesor la configuró.</li>
                 </ol>
               </div>
             </div>
@@ -272,7 +284,7 @@
             <div class="card bg-success text-white shadow-sm border-0">
               <div class="card-body text-center py-4">
                 <h4 class="fw-bold mb-1"><i class="fa-solid fa-circle-check me-2"></i>Examen Entregado</h4>
-                <p class="mb-0 fs-5">¡Tu evaluación ha sido registrada exitosamente!</p>
+                <p class="mb-0 fs-5">¡Tu evaluación en NEO LMS ha sido registrada exitosamente!</p>
               </div>
             </div>
           </div>
