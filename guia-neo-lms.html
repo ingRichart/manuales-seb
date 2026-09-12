@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración NEO LMS y SEB - Portal SEB</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Estilos globales y reutilizados */
+    .hero-step {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      color: white;
+      padding: 2.5rem 0;
+    }
+    .intro-box {
+      background-color: #e8f0fe;
+      border-left: 5px solid #0d6efd;
+      padding: 15px 20px;
+      border-radius: 6px;
+    }
+    .step-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+      padding: 25px;
+    }
+    .step-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      color: #0d6efd;
+      border-bottom: 2px solid #f8f9fa;
+      padding-bottom: 10px;
+      margin-top: 0;
+      font-weight: bold;
+    }
+    .step-number {
+      background: #0d6efd;
+      color: white;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 20px;
+    }
+    /* Contenedores de imágenes */
+    .img-container {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .img-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #dadce0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    /* Bloque de código con botón de copiar */
+    .code-block {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: monospace;
+      position: relative;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .copy-btn:hover {
+      background: #0b5ed7;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- BARRA DE NAVEGACIÓN (MENÚ PRINCIPAL) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-shield-halved me-2"></i>Portal SEB
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Manuales y Guías
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="instalacion-seb.html">Instalación de SEB</a></li>
+              <li><a class="dropdown-item" href="prueba-piloto.html">Prueba Piloto</a></li>
+              <li><a class="dropdown-item" href="guia-configuracion.html">Configuración (Formularios / Classroom)</a></li>
+              <li><a class="dropdown-item active" href="guia-neo-lms.html">Configuración Examen NEO LMS</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="politicas.html">Políticas y Reglamento</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO / HERO -->
+  <header class="hero-step text-center mb-4">
+    <div class="container">
+      <h1 class="fw-bold"><i class="fa-solid fa-graduation-cap me-2"></i>Crear Examen en NEO LMS con SEB</h1>
+      <p class="lead mb-0">Guía para la configuración de seguridad y recepción de evidencias con Google Drive</p>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- BOTÓN VOLVER -->
+        <a href="index.html" class="btn btn-outline-secondary btn-sm mb-4">
+          <i class="fa-solid fa-arrow-left me-1"></i> Volver al Menú Principal
+        </a>
+
+        <!-- CAJA INTRODUCTORIA -->
+        <div class="intro-box mb-4 shadow-sm">
+          <h5 class="fw-bold text-primary mb-2"><i class="fa-solid fa-circle-info me-2"></i>¿Qué aprenderás en esta guía?</h5>
+          <ol class="mb-0 text-secondary">
+            <li><a href="#creacion-examen">Habilitar y configurar las contraseñas de Safe Exam Browser dentro de NEO LMS.</a></li>
+            <li><a href="#configuracion-drive">Preparar las carpetas de Google Drive para subir archivos durante la evaluación.</a></li>
+            <li><a href="#pregunta-evidencias">Crear las preguntas con hipervínculos personalizados e instrucciones claras para los estudiantes.</a></li>
+          </ol>
+        </div>
+
+        <!-- SECCIÓN 1: CONFIGURACIÓN EN NEO LMS -->
+        <section id="creacion-examen" class="step-card">
+          <h2 class="step-title">
+            <span class="step-number">1</span>
+            Configuración del Examen en NEO LMS
+          </h2>
+          <ol class="lh-lg">
+            <li>
+              Crea la tarea como normalmente creas un examen dentro de la plataforma NEO LMS.
+              <div class="img-container">
+                <img src="img/Neo-Paso01.png" alt="Crear examen en NEO LMS">
+              </div>
+            </li>
+            <li>
+              Una vez finalizada la configuración general del examen, dirígete al menú y selecciona la opción <strong>Proctor</strong>.
+              <div class="img-container">
+                <img src="img/Neo-Paso02.png" alt="Menú Proctor en NEO LMS">
+              </div>
+            </li>
+            <li>
+              En esta sección, habilita la opción de <strong>Safe Exam Browser</strong> y marca la casilla: 
+              <br><code>Require Safe Exam Browser to complete the assignment?</code>
+              <div class="img-container">
+                <img src="img/Neo-Paso03.png" alt="Habilitar SEB en NEO LMS">
+              </div>
+            </li>
+            <li>
+              Haz clic en el botón correspondiente para asignar las claves. Se recomienda definir las siguientes contraseñas:
+              <ul>
+                <li><strong>Student Password (Contraseña de estudiante)</strong> y <strong>Quit Password (Contraseña de salida):</strong> Usar la misma clave.</li>
+                <li><strong>Teacher Password (Contraseña del profesor):</strong> Asignar una clave totalmente distinta a las dos anteriores.</li>
+              </ul>
+              <div class="img-container">
+                <img src="img/Neo-Paso04.png" alt="Configuración de contraseñas de SEB">
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- SECCIÓN 2: CONFIGURACIÓN PREVIA EN GOOGLE DRIVE -->
+        <section id="configuracion-drive" class="step-card">
+          <h2 class="step-title">
+            <span class="step-number">2</span>
+            Configuración de Google Drive para preguntas de "Subir Archivos"
+          </h2>
+          <ol class="lh-lg">
+            <li>
+              En Google Drive, crea una carpeta dedicada para cada alumno. <em>(Por ejemplo: si la clase tiene 5 alumnos, se deben crear 5 carpetas independientes).</em>
+              <div class="img-container">
+                <img src="img/Neo-Paso05.png" alt="Creación de carpetas independientes en Google Drive">
+              </div>
+            </li>
+            <li>
+              Compartir cada carpeta <strong>exclusivamente</strong> con el alumno correspondiente.
+              <div class="alert alert-warning border-0 shadow-sm mt-2 mb-2" role="alert">
+                <i class="fa-solid fa-triangle-exclamation me-2"></i><strong>Reglas importantes:</strong> Un solo alumno por carpeta. <strong>NO</strong> compartas dos o más alumnos en la misma carpeta para proteger la privacidad de sus entregas.
+              </div>
+              <div class="img-container">
+                <img src="img/Neo-Paso05a.png" alt="Permisos de la carpeta en Google Drive">
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- SECCIÓN 3: REDACCIÓN DE LA PREGUNTA EN NEO LMS -->
+        <section id="pregunta-evidencias" class="step-card">
+          <h2 class="step-title">
+            <span class="step-number">3</span>
+            Redacción de Pregunta y Enlaces en NEO LMS
+          </h2>
+          <ol class="lh-lg">
+            <li>
+              Al crear la pregunta del tipo <strong>Subir archivos</strong>, incluye en el apartado de descripción el siguiente texto instructivo:
+              <div class="code-block" id="instructionsText">
+<button class="copy-btn" onclick="copyInstructions()"><i class="fa-solid fa-copy me-1"></i>Copiar</button>Instrucciones para entregar tu examen:
+
+1. Una vez que hayas terminado de realizar tu examen, toma fotografías de tu examen con tu celular. Asegúrate de que las fotografías sean lo más claras y legibles posible y que se pueda visualizar todo el contenido de tus respuestas.
+2. Revisa las fotografías antes de subirlas para verificar que no estén borrosas, cortadas o que falte alguna página.
+3. Sube las fotografías a la carpeta de Google Drive que tienes compartida con el maestro para esta clase.
+4. Coloca los archivos en la carpeta que corresponda, de acuerdo con las indicaciones proporcionadas por tu maestro.
+Importante: Verifica que tus fotografías se hayan cargado correctamente en la carpeta correspondiente antes de finalizar tu entrega.
+              </div>
+              <div class="img-container">
+                <img src="img/Neo-Paso06.png" alt="Texto de instrucciones en la pregunta">
+              </div>
+            </li>
+            <li>
+              En el texto de la pregunta, inserta los nombres de los alumnos y convierte cada uno en un <strong>ENLACE</strong> apuntando a su respectiva carpeta compartida de Drive.
+              <br><small class="text-danger fw-bold"><i class="fa-solid fa-circle-exclamation me-1"></i>
+                Crucial:</small> Configura el enlace con la opción <strong>"Abrir enlace en: Nueva ventana"</strong>
+                para evitar que el navegador cierre la evaluación activa.
+              <div class="img-container">
+                <img src="img/Neo-Paso07.png" alt="Crear hipervínculo en ventana nueva">
+              </div>
+            </li>
+            <li>
+              Al finalizar, la pregunta debe incluir las instrucciones redactadas y un listado limpio con un enlace individual asignado a cada alumno para el envío de sus evidencias.
+              <div class="img-container">
+                <img src="img/Neo-Paso08.png" alt="Resultado final de la pregunta con listado de alumnos">
+              </div>
+            </li>
+          </ol>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA (FOOTER) -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 Universidad del Norte, A.C. - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function copyInstructions() {
+      const textToCopy = `Instrucciones para entregar tu examen:\n\n1. Una vez que hayas terminado de realizar tu examen, toma fotografías de tu examen con tu celular. Asegúrate de que las fotografías sean lo más claras y legibles posible y que se pueda visualizar todo el contenido de tus respuestas.\n2. Revisa las fotografías antes de subirlas para verificar que no estén borrosas, cortadas o que falte alguna página.\n3. Sube las fotografías a la carpeta de Google Drive que tienes compartida con el maestro para esta clase.\n4. Coloca los archivos en la carpeta que corresponda, de acuerdo con las indicaciones proporcionadas por tu maestro.\nImportante: Verifica que tus fotografías se hayan cargado correctamente en la carpeta correspondiente antes de finalizar tu entrega.`;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('¡Instrucciones copiadas al portapapeles!');
+      }).catch(err => {
+        console.error('Error al copiar: ', err);
+      });
+    }
+  </script>
+
+</body>
+</html>
