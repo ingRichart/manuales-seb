@@ -346,13 +346,31 @@
     }
 
     // Callback llamado al autenticar en Google
-    function handleCredentialResponse(response) {
-      const data = parseJwt(response.credential);
-      const userEmail = data.email;
+    async function handleCredentialResponse(response) {
+      try {
+        // REEMPLAZA ESTA URL CON TU ENDPOINT DE API GATEWAY
+        const AWS_ENDPOINT = 'https://7byqtfmn2h.execute-api.us-east-1.amazonaws.com/default/AutenticacionSEB';
 
-      // Guardar sesión de manera persistente en el navegador
-      localStorage.setItem("user_email", userEmail);
-      updateUI(userEmail);
+        const res = await fetch(AWS_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token: response.credential })
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          localStorage.setItem("user_email", data.email);
+          localStorage.setItem("user_authorized", "true");
+          updateUI(data.email);
+        } else {
+          localStorage.clear();
+          alert("Acceso denegado: " + data.message);
+        }
+      } catch (error) {
+        console.error("Error conectando con el backend:", error);
+        alert("Ocurrió un error al validar las credenciales.");
+      }
     }
 
     // Actualiza los elementos del DOM y estilos si el usuario está autorizado
