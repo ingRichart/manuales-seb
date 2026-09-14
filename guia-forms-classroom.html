@@ -98,6 +98,23 @@
       background: #0b5ed7;
     }
   </style>
+
+  <!-- SCRIPT DE PROTECCIÓN (Colocar antes de cargar el contenido visual) -->
+  <script>
+    (function () {
+      // 1. Obtener el estado guardado en el navegador
+      const userEmail = localStorage.getItem("user_email");
+      const isAuthorized = localStorage.getItem("user_authorized");
+
+      // 2. Si no hay correo o no está marcado como autorizado por AWS, expulsar
+      if (!userEmail || isAuthorized !== "true") {
+        alert("Acceso restringido: Debes iniciar sesión con una cuenta autorizada.");
+        window.location.href = "index.html";
+      }
+    })();
+  </script>
+
+
 </head>
 <body class="bg-light">
 

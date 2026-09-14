@@ -97,7 +97,23 @@
     .copy-btn:hover {
       background: #0b5ed7;
     }
+    
   </style>
+
+  <script>
+    (function () {
+      // 1. Obtener el estado guardado en el navegador
+      const userEmail = localStorage.getItem("user_email");
+      const isAuthorized = localStorage.getItem("user_authorized");
+
+      // 2. Si no hay correo o no está marcado como autorizado por AWS, expulsar
+      if (!userEmail || isAuthorized !== "true") {
+        alert("Acceso restringido: Debes iniciar sesión con una cuenta autorizada.");
+        window.location.href = "index.html";
+      }
+    })();
+  </script>
+
 </head>
 <body class="bg-light">
 
@@ -291,6 +307,26 @@ Importante: Verifica que tus fotografías se hayan cargado correctamente en la c
       });
     }
   </script>
+
+  <!-- MODAL DE ACCESO RESTRINGIDO -->
+  <div class="modal fade" id="restrictedModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow-lg border-0 rounded-4">
+        <div class="modal-body text-center p-4">
+          <div class="mb-3 text-danger">
+            <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
+          </div>
+          <h4 class="fw-bold text-dark mb-2">Acceso Restringido</h4>
+          <p class="text-muted mb-4">
+            Debes iniciar sesión con una cuenta docente autorizada para ver esta sección.
+          </p>
+          <button id="btnRedirectIndex" type="button" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold">
+            <i class="fa-solid fa-arrow-left me-2"></i> Ir al Inicio
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
