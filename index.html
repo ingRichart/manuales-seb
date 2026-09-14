@@ -348,8 +348,8 @@
     // Callback llamado al autenticar en Google
     async function handleCredentialResponse(response) {
       try {
-        // REEMPLAZA ESTA URL CON TU ENDPOINT DE API GATEWAY
-        const AWS_ENDPOINT = 'https://7byqtfmn2h.execute-api.us-east-1.amazonaws.com/default/AutenticacionSEB';
+        // LÍNEA CORREGIDA:
+        const AWS_ENDPOINT = 'https://7byqtfmn2h.execute-api.us-east-1.amazonaws.com/AutenticacionSEB';
 
         const res = await fetch(AWS_ENDPOINT, {
           method: 'POST',
